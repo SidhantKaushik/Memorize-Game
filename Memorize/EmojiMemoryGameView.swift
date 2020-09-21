@@ -8,10 +8,10 @@
 
 import SwiftUI
 struct EmojiMemoryGameView: View {
-    var viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
     var body: some View {
-        return HStack/*spacing: 2, could include this to remove the space between the rows*/{
-            return ForEach(viewModel.cards) { card in
+        HStack/*spacing: 2, could include this to remove the space between the rows*/{
+            ForEach(viewModel.cards) { card in
                 CardView(card: card).onTapGesture{ self.viewModel.choose(card: card)}
                 
             }
