@@ -36,7 +36,7 @@ struct CardView: View{
                    .stroke(lineWidth: 3)//.foregroundColor(Color.blue) //overriding the zstack color
                RoundedRectangle(cornerRadius: 10.0)
                    .fill(Color.white)
-               
+            }
                 if randomNumber.random > 3 {
                 Text(card.content)
                     .font(.body)
@@ -46,9 +46,9 @@ struct CardView: View{
                         .font(.largeTitle)
                 }
             }
+           
                           }
         }
-    }
 
 
 

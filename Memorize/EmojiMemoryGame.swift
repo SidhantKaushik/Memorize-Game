@@ -10,9 +10,9 @@ import SwiftUI
 struct randomNumber {
     static var random = Int.random(in: 2...5)
 }
-class EmojiMemoryGame{
+class EmojiMemoryGame: ObservableObject{
     /*private(set)/*glass door meaning only can view it but cant change it*/ var game: MemoryGame<String>*/
-    private var game: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    @Published private var game: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     
     static func createMemoryGame() -> MemoryGame<String> {
