@@ -15,6 +15,7 @@ struct EmojiMemoryGameView: View {
                 CardView(card: card).onTapGesture{
                     self.viewModel.choose(card: card)
             }
+                .padding(5)
     }
         .foregroundColor(Color.orange) //tell every view inside of the z stack to have a foreground color of orange
         .padding()
@@ -43,7 +44,9 @@ struct CardView: View{
             Text(self.card.content)
         }
             else {
+                if !card.isMatched{
                 RoundedRectangle(cornerRadius: 10.0).fill()
+            }
             }
         }
         .font(Font.system(size: fontSize(for: size)))
